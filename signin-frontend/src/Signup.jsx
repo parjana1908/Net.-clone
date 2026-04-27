@@ -9,7 +9,8 @@ function Signup() {
   const [confirmPass, setConfirmPass] = useState("")
   const [error, setError] = useState("")
 
-  const BACKEND_URL = "http://localhost:5000"
+//   const BACKEND_URL = "http://localhost:5000"
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"
 
   function register(e) {
     e.preventDefault()
